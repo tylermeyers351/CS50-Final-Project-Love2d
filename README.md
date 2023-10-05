@@ -1,9 +1,9 @@
 # Zombie Invasion 2nite
 
 **Author:** Tyler Meyers  
-**Video Demo:** [Watch Demo](https://youtu.be/HfMk_WfMGR4) - Unfortunately the video quality is poor so the sound is noticeably laggy. Download for the true experience!
-**Time Spent:** Approximately 20 hours
-**Project Completion:** January 2023
+**Video Demo:** [Watch Demo](https://youtu.be/HfMk_WfMGR4) - Unfortunately the video quality is poor so the sound is noticeably laggy. Download for the true experience!  
+**Time Spent:** Approximately 20 hours  
+**Project Completion:** January 2023  
 
 ## Running the Love2D Game Locally
 Make sure you have Love2D installed on your computer. You can download it from [love2d.org](https://love2d.org).
