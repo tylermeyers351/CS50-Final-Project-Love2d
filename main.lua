@@ -89,9 +89,17 @@ function love.update(dt)
     end
 
     -- update enemy movement
-    for i, e in ipairs(enemies) do
-        e.x = e.x - e.speed * dt
+    if gameState == 2 then
+        for i, e in ipairs(enemies) do
+            e.x = e.x + (math.cos( zombiePlayerAngle(e) ) * e.speed * dt)
+            e.y = e.y + (math.sin( zombiePlayerAngle(e) ) * e.speed * dt)
+        end
+    elseif gameState == 3 then
+        for i, e in ipairs(enemies) do
+            e.x = e.x - e.speed * dt
+        end
     end
+
 
     if gameState == 2 then
         --spawn enemies
@@ -143,11 +151,12 @@ function love.update(dt)
         end
     end
 
+    -- right here bitch
     for i, e in ipairs(enemies) do
-        if e.x < 0 then 
-            for i=#enemies, 1, -1 do
-                table.remove(enemies, i)
-            end
+        if distance(hero.x, hero.y, e.x, e.y) < 15 then
+            --for i=#enemies, 1, -1 do
+                --table.remove(enemies, i)
+            --end
             gameState = 3
         end
     end
@@ -196,15 +205,22 @@ function love.draw()
     hero:render()
     for i, b in ipairs(bullets) do
         love.graphics.draw(sprites.bullet, b.x, b.y, 1.5708, 0.20, 0.20, 12, 50)
-    end
+    end 
 
     for i, s in ipairs(splatters) do
         love.graphics.draw(sprites.blood, s.x, s.y, nil, 0.1, 0.1, 300, 100)
     end
 
-    for i, e in ipairs(enemies) do
-        --love.graphics.draw( drawable, x, y, r, sx, sy, ox, oy, kx, ky )
-        love.graphics.draw(sprites.zombie, e.x, e.y, 3.14159, 0.13, 0.13, nil, 311/2)
+    if gameState == 2 then
+        for i, e in ipairs(enemies) do
+            --love.graphics.draw( drawable, x, y, r, sx, sy, ox, oy, kx, ky )
+            love.graphics.draw(sprites.zombie, e.x, e.y, zombiePlayerAngle(e), 0.13, 0.13, nil, 311/2)
+        end
+    else
+        for i, e in ipairs(enemies) do
+            --love.graphics.draw( drawable, x, y, r, sx, sy, ox, oy, kx, ky )
+            love.graphics.draw(sprites.zombie, e.x, e.y, -3.14, 0.13, 0.13, nil, 311/2)
+        end
     end
 
     -- dialogue
@@ -306,4 +322,8 @@ function distantshooting(num1, num2)
         gSounds['distantshooting']:setVolume(2)
         gSounds['distantshooting']:play()
     end
+end
+
+function zombiePlayerAngle(enemy)
+    return math.atan2( hero.y - enemy.y, hero.x - enemy.x )
 end
