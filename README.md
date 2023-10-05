@@ -1,8 +1,9 @@
 # Zombie Invasion 2nite
 
 **Author:** Tyler Meyers  
-**Video Demo:** [Watch Demo](https://youtu.be/HfMk_WfMGR4)  
+**Video Demo:** [Watch Demo](https://youtu.be/HfMk_WfMGR4) - Unfortunately the video quality is poor so the sound is noticeably laggy. Download for the true experience!
 **Time Spent:** Approximately 20 hours
+**Project Completion:** January 2023
 
 ## Running the Love2D Game Locally
 Make sure you have Love2D installed on your computer. You can download it from [love2d.org](https://love2d.org).
@@ -28,7 +29,7 @@ I utilized some code from CS50g's pong to get me started with a template.
 
 ### Below are things that I struggled with...
 - Implementing the Knife library which was used in the CS50g lecture. This libary used timers, and I just couldn't figure out how to implement them. In the end, I used a workaround that probably added more code than was ideal. 
-- Surprisngly, it was dificult to find the ideal background and adjust it properly.
+- Surprisngly, it was difficult to find the ideal background and adjust it properly.
 - For the gunshots, I realized that only one sound can be played at a time. (this didn't work as you could shoot in-game multiple times but only hear one gunshot). The workaround in the code was... if a gunshot was already playing, you need to stop it, and play another.
 - reloading required a little more math than expected. needed a lot of if statements for if the reserve ammo was lower than 0.
 
