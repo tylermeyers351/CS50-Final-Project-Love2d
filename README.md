@@ -5,24 +5,13 @@
 **Time Spent:** Approximately 20 hours
 
 ## Running the Love2D Game Locally
-
-### Prerequisites
 Make sure you have Love2D installed on your computer. You can download it from [love2d.org](https://love2d.org).
 
 ### Clone the Repository
-- Use your operating system's file explorer or terminal/command prompt to navigate to the directory containing the Love2D game files (where `main.lua` is located).
+- Clone the repo and use your operating system's file explorer or terminal/command prompt to navigate to the directory containing the Love2D game files (where `main.lua` is located).
 
 ### On Windows:
 - Simply drag and drop the game directory onto the `love.exe` executable that you installed earlier. This will launch the Love2D game.
-
-### On macOS and Linux:
-- Open the terminal.
-- Navigate to the game's directory using the `cd` command. For example:
-  ```shell
-  cd /path/to/your/game
--Run the game using the love command followed by a period . to specify the current directory:
-love .
-
 
 ### Description:
 Utilizing the Love 2d framework (and Lua - the scripting language), I created a demo of a game I envisioned could potentially expanded on with more features, better funcionality, and improved graphics. The game took me about a week to finish (around 20 hours total), and was completed in two very distinct stages - the game mechanics stage (spawning hero, zombies, and bullets - collision system) and the polish stage (sprties, sounds, background, gamestates). Each took around 10 hours.
