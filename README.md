@@ -25,8 +25,6 @@ This game includes a healthy amount of features, and it was interesting to see w
 
 It was fun to get stuck on something and then either find a creative solution or a work around. I wasn't too hard on myself as this was my first game, so if I couldn't figure something out or do it the right way, I'd find a trick to still implement the feature or simply skip it for timesake.
 
-I utilized some code from CS50g's pong to get me started with a template.
-
 ### Below are things that I struggled with...
 - Implementing the Knife library which was used in the CS50g lecture. This libary used timers, and I just couldn't figure out how to implement them. In the end, I used a workaround that probably added more code than was ideal. 
 - Surprisngly, it was difficult to find the ideal background and adjust it properly.
